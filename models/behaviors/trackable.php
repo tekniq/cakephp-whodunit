@@ -44,7 +44,7 @@ class TrackableBehavior extends ModelBehavior {
 			}
 
 			foreach ($fields as $field) {
-				if (!isset($model->data[$model->alias][$field])) {
+				if (!array_key_exists($field, $model->data[$model->alias])) {
 					$model->data[$model->alias][$field] = $userId;
 				}
 			}
