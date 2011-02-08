@@ -33,7 +33,7 @@ class TrackableBehavior extends ModelBehavior {
 	function beforeSave(&$model) {
 		if ($userId = $model->getUserId()) {
 			$fields = array();
-			if (empty($model->data[$model->alias]['id']) && $model->hasField('created_by')) {
+			if (!$model->id && empty($model->data[$model->alias]['id']) && $model->hasField('created_by')) {
 				$fields[] = 'created_by';
 			}
 			if ($model->hasField('modified_by')) {
