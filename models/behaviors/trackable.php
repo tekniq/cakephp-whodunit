@@ -62,7 +62,6 @@ class TrackableBehavior extends ModelBehavior {
 	}
 	
 	function getUserId(&$model) {
-		$userModel = $this->settings[$model->alias]['userModel'];
-		return $userModel::get('id');
+		return false;
 	}
 }
