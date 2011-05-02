@@ -1,9 +1,4 @@
 <?php
-/**
- * Important: This behavior relies on the userModel implementing the Singleton method. For more
- *  information, see - http://www.pseudocoder.com/free-cakephp-book.
- *  
- */
 class TrackableBehavior extends ModelBehavior {
 	function setup(&$model, $settings = array()) {
 		$this->settings[$model->alias] = array_merge(array(
